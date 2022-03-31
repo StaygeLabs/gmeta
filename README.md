@@ -1,6 +1,6 @@
-
-# 수정사항-2022-0401
-meta http-equiv 에 대한 처리.
+# Update Note
+* 2022-0401
+> processing for meta http-equiv
 
 
 # GMeta
