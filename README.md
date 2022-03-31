@@ -1,3 +1,8 @@
+
+# 수정사항-2022-0401
+meta http-equiv 에 대한 처리.
+
+
 # GMeta
 A ridiculously lightweight metadata extractor for the given url or html
 
