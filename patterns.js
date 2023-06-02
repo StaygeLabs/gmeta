@@ -30,7 +30,7 @@ module.exports = [
       "twitter:image",
       "twitter:card",
       "twitter:site",
-      "twitter:creator",x
+      "twitter:creator",
       "summary",
       "classification",
       "author",
