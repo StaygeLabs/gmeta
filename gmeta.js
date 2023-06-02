@@ -53,9 +53,7 @@ var gmeta = function (url, callback, isHTML) {
     if (!url || url == undefined || url == "undefined") url = "";
     if (callback === true) isHTML = true;
     let meta = {};
-	const headers = {
-      'user-agent': 'Mozilla/5.0 (compatible; opengraph;)'
-    }
+	const headers = {'user-agent': 'Mozilla/5.0 (compatible; opengraph;)'};
     if (!isHTML || isHTML === false) {
       try {
         const response = await got(url, { timeout: 3000, headers });
