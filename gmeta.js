@@ -53,9 +53,12 @@ var gmeta = function (url, callback, isHTML) {
     if (!url || url == undefined || url == "undefined") url = "";
     if (callback === true) isHTML = true;
     let meta = {};
+	const headers = {
+      'user-agent': 'Mozilla/5.0 (compatible; opengraph;)'
+    }
     if (!isHTML || isHTML === false) {
       try {
-        const response = await got(url, { timeout: 3000 });
+        const response = await got(url, { timeout: 3000, headers });
         let head = response.body.match(/<head[^>]*>[\s\S]*<\/head>/gi);
         if(head){
           return metaDataResolveByUrl(meta,head,response,resolve)
@@ -74,7 +77,7 @@ var gmeta = function (url, callback, isHTML) {
           // console.log('parseMetaRefresh =',meta.url,'url=',retResolve);
           // console.log('urlResolved=',urlResolved);
 
-          const response2 = await got(urlResolved, { timeout: 3000 });
+          const response2 = await got(urlResolved, { timeout: 3000, headers });
           let head = response2.body.match(/<head[^>]*>[\s\S]*<\/head>/gi);
           if(head){
             return metaDataResolveByUrl(meta,head,response2,resolve)
